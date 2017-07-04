@@ -16,6 +16,27 @@ rotate :: Int -> [a] -> [a]
 rotate _ [] = []
 rotate n xs = zipWith const (drop n (cycle xs)) xs
 
+-- Intervals
+
+unison          = []
+semitone        = [H]
+minorSecond     = semitone
+majorSecond     = [W]
+minorThird      = [W,H]
+majorThird      = [W,W]
+perfectFourth   = [W,W,H]
+tritone         = [W,W,W]
+augmentedFourth = tritone
+diminishedFifth = tritone
+perfectFifth    = [W,W,W,H]
+minorSixth      = [W,W,W,W]
+majorSixth      = [W,W,W,W,H]
+minorSeventh    = [W,W,W,W,W]
+majorSeventh    = [W,W,W,W,W,H]
+octave          = [W,W,W,W,W,W]
+
+-- Modes/Scales
+
 ionianIntervalSet :: IntervalSet
 ionianIntervalSet = [W, W, H, W, W, W, H]
 
